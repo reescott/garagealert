@@ -10,6 +10,7 @@ if (!process.env.DOOR_PIN || !process.env.INTERVAL_DELAY) {
 const doorSwitch = new Gpio(process.env.DOOR_PIN, "in");
 let currentState = 0; // Defaults to closed
 
+console.log("Garage Alert System initialized...");
 setInterval(() => {
   doorSwitch.read(function(err, newState) {
     if (currentState === newState) return;
@@ -19,7 +20,7 @@ setInterval(() => {
       value1: "Garage Door is ",
       value2
     };
-    process.stdOut.write(`Garage door is ${value2}`);
+    console.log(`State Change --> Garage door is ${value2}`);
     currentState = newState;
     postEvent(eventData);
   });
