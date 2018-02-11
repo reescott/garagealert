@@ -1,8 +1,7 @@
 {
   "name": "puertoaviso",
   "version": "0.0.1",
-  "description":
-    "A door alert system for your home - don't leave your garage door open!",
+  "description": "A door alert system for your home - don't leave your garage door open!",
   "main": "index.js",
   "dependencies": {
     "dotenv": "^4.0.0",
@@ -15,7 +14,12 @@
   "engines": {
     "node": ">=8"
   },
-  "keywords": ["garage", "door", "alert", "notification"],
+  "keywords": [
+    "garage",
+    "door",
+    "alert",
+    "notification"
+  ],
   "author": "Scott Rees",
   "license": "MIT",
   "repository": {

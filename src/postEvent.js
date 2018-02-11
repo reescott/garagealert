@@ -26,12 +26,9 @@ const postEvent = eventData => {
 
   const postReq = https
     .request(options, res => {
-      console.log("statusCode:", res.statusCode);
-      console.log("headers:", res.headers);
-      // console.log(res);
-
       res.on("data", d => {
         process.stdout.write(d);
+
       });
     })
     .on("error", e => {
